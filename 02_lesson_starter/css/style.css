@@ -1,0 +1,65 @@
+/* Use web dev tools to inspect CSS to see how rulesets are being applied
+!important - overrides all other settings, dangerous, use sparringly */
+/* DRY -  do not repeat yourself */
+
+/* Universal selector */
+* {
+    font-family: monospace;
+}
+
+/* Typically would have font size and similar settings here*/
+html{
+    font-size: 22px;
+
+}
+
+/* element selector */
+/* Note on inheritance, body is parent to 
+all other elements here so the font size is inherited*/
+body{
+
+}
+
+/* Semantic selector, should only appear once */
+main{
+    font-family: monospace;
+}
+
+/* These items no not automatically inherit*/
+button, input, textarea, select{
+    font: inherit
+}
+
+/* can apply rule to many selectors
+Note that h1, h2 is interpreted as separate
+h1 h2 looks for h2s in h1s.
+*/
+h1, h2{
+    color: blue;
+}
+
+p {
+    color: purple;
+}
+
+/* last p definition red so it takes precedence. 
+Specificity such as a class takes precedence*/
+p{
+    color: red;
+}
+
+.highlight {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+/* Example of a class */
+.gray {
+    color: gray;
+
+}
+
+/* Id selector, typically not used in CSS files  */
+#second {
+    font-style: italic;
+}
