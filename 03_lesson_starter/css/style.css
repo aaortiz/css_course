@@ -1,5 +1,21 @@
+/*
+Contrast checkers: coolors.co/contrast-checker/
+webaim contrast checker
+*/
+
 body {
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+    background: #ffefd5; /*background-color works too*/
+    color: rgb(0 ,0,0); /*colors for text, can use names, rgb ex. rgb(255,0,0), hex*/
+}
+
+/* specifiy different color for paragraphs*/
+p{
+    color: rgba(0,0,0,.5); /* the fourth param is transparency form 0 to 1*/
+    color: #000000; /* hex code has six positions, each two map to a color similar to rgb*/
+    color: hsl(98, 100%, 50%); /* hue saturation lightness, hue is 0-360, saturation and ligthness 0-100%*/
+    /*if pairs match then you can write shorthand example 000 also maps to black*/
+    color: #333;
 }
