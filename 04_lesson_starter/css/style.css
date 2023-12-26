@@ -1,0 +1,61 @@
+/*
+Notes
+Absolute font sizes as number of pixels is possible
+though not perferred. We want to give users the option
+to change font size as needed.
+
+An example of setting an absolute font size is:
+
+html{
+    font-size: 16px; 
+}
+
+16px tends to be the default for many browsers.
+
+MDN gives us a set of guidelines for font sizes. Note that
+the most common absolute size is 1 px = 1/96th inches:
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+
+Widths can take percentage. Percentages are based relative to the parent element.
+For example, if the body is the parent of an h1 and we set the width of the body to
+50%, the width of the h1 element set to 100% will translate to 50% of the body element's
+total width.
+
+Relative font sizes using rem - relative to root element
+
+em - relative to parent element, can cause unintended font sizes be careful!
+since ems are scoped within the element these are great for padding
+
+vh and vw are other relative units (to the viewport) to be aware of. The vw unit 
+may lead to content out growing the constrained element. 
+
+vh can be useful to make an element the size of the page.
+
+*/
+
+/* Demonstration of overriding browser defaults */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    border: 2px dashed red;
+    width: 50%;
+    font-size: 3rem;
+    padding: .5em; 
+}
+
+main{
+    font-size: 2rem;
+}
+
+body{
+    min-height: 100vh;
+}
+
+p {
+    font-size: 2rem;
+    width: 40ch;
+}
