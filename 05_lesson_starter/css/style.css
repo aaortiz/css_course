@@ -1,25 +1,55 @@
+/*
+The wild card * helps us reset our CSS for all elements.
+
+We can eliminate all margin and padding to make it easier to 
+calculate what we are styling.
+
+Contet-box provides control on the box surrounding content only.
+
+Border-box includes border and padding which makes it easier to calculate
+overall areas we are styling. Note this does not include margin.
+
+You can see the difference in the computed box model in dev tools.
+
+shift + option + arrow down copies the last line and pastes on next line
+
+shift + option + A comments out lines
+
+margin goes top right bottom left in that order for shorthand
+similar shorthand applies to padding
+
+border-top-width
+border-top-style
+border-top-color
+
+outline sits outside the border and not calculated by the box model
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    min-height: 100vh;
+.container {
+    border: 10px double red;
+    font-size: 1.5rem;
+    margin: 1.5em 2em 2em 2em;
+   /*  margin-top: 1.5em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    margin-left: 2em; */
+    padding: 1.5rem;
+    outline: 5px solid purple;
+    outline-offset: -20px; /*can be positive or negative*/
 }
 
-h1 {
-    border: 2px dashed red;
-    width: 50%;
-    font-size: 3rem;
-    padding: 0.5em;
-}
-
-main {
-    font-size: 2rem;
-}
-
-p {
-    font-size: 2rem;
-    width: 40ch;
+.circle{
+    margin: 3rem auto; /* auto centers left and right*/
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50px; /* halft the width and height*/
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
 }
