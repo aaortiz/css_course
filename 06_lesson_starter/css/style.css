@@ -1,0 +1,35 @@
+/* alt-z - wrapping of code in VS code
+fonts with space in their name need '' to handle the space
+series of fonts are applied as available in order
+*/
+
+/* Import a font from google fonts 
+Note that imports slowdown the webpage
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* input, button{
+    font: inherit;
+} */
+
+p{
+/*     text-decoration: line-through;
+    text-decoration: underline; */
+    text-transform: lowercase; /* uppercase, lowercase, capitalize (first letter of each word)*/
+    text-align: left; /*justify, left, right*/
+    text-indent: 2em; /* indent the first word of the paragraph*/
+    line-height: 1.5;
+    /*also, line-spacing for headings, word-spacing*/
+    font-weight: normal;
+    font-style:oblique;
+    /*font-family: Helvetica;*/
+    word-spacing: normal;
+    letter-spacing: normal;
+
+}
