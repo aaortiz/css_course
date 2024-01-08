@@ -5,3 +5,44 @@ body {
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
 }
+
+/*Default Styles of links
+visit link it turns purple
+hover over the link the cursor becomes a finger pointer
+click and hold activates the link in red
+*/
+
+a{
+    color: hsl(207, 44%, 49%);
+    /* Defaults
+    text-decoration: none;
+    cursor: pointer;
+    color: blue;  
+    Note, setting the color overrides the visited link color of purple, 
+    need to define psuedo classes
+    */
+
+}
+
+/* psuedo classes, more specificity than just a selector
+
+The order below matters due to overriding that occurs when the this css file is read
+
+*/
+a:visited {
+
+    color: purple;
+}
+
+a:hover {
+    /* using HSL and changing the first number can give a complimentary color for hover
+    also, fourth value is transparency which can help change the color without changing
+    the first number in  the HSL*/
+    color: hsl(190, 44%, 49%);
+    background: gold;
+}
+
+ 
+a:active{
+    color: red;
+}
