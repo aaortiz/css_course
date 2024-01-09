@@ -4,3 +4,37 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
 }
+
+.columns {
+  /* column-count: 4; */
+  /* column-width: 250px; min we support one column */
+  /* Shorthand for the above*/
+  columns: 4 250px;
+  column-rule: 3px solid #333;
+  column-gap: 3rem;
+}
+
+.columns p {
+  margin-top: 0;
+}
+
+.columns h2 {
+  margin-top: 0;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  break-inside: avoid; /* keeps the header intact*/
+  break-before: column; /* This may cause unwanted shrinkage of text when page is shrank*/
+}
+
+.columns .quote { /* Need .columns in front of .quote to overcome the specificity of .columns p*/
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+  column-span: all;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
