@@ -17,13 +17,41 @@ body {
   min-height: 400px;
   margin-inline: auto;
   border: 1px solid #000;
+  display: flex;
+  gap: 1rem; /* spaces between boxes */
+  justify-content:center; /*space around, between, evenly | flex start end center moves all boxes*/
+  align-items: center; /* vertical alignment | start end left*/
+  /* flex-direction: row; /* stacks boxes vertically | row or column, row-reverse, col-reverse
+  flex-wrap: wrap; ensures we don't have overflow */
+  flex-flow: row wrap; /* shorthand to achieve flow-direction and wrap, note the defualt for flex is no wrap*/
+  align-content: space-evenly; /* flext start end, center, space-around, sapce-evenly */
 } 
 
+/* CMD + D to select all of the same selection eg. "flex-grow" with cmd + d selects all instance of flex-grow*/
+
 .box {
-  min-width: 100px;
-  min-height: 100px;
+  /* min-width: 100px; */
+  height: 100px;
   background-color: #000;
   color: #fff;
   font-size: 2rem;
   padding: 0.5rem;
+
+  /* Can apply the alignment below to center something on the page*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* flex-grow: 1; /* they boxes grow the same amount
+  flex-shrink: 1;
+  flex-basis:  250px; acting as min width but not exactly the same */
+  flex: 1 1 150px; /* short hand grow shrink basis*/
+}
+
+/* override a specific boxes properties*/
+.box:nth-child(2){
+  /* flex-grow: 2; after the basis space this box takes twice the remaining space or 2/3rd of the space */
+  /* flex-shrink: 2; flex-shrink let's objects be less than their basis */
+  flex: 2 2 150px;
+  order: 1; /* order of 4 moves to the end, -1 infront of 1, order 0 in its original position*/
 }
