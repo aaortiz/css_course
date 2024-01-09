@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
 
+/* CSS reset */
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,7 @@ body {
   width: 75vw;
   height: 85vh;
   margin: 40px auto;
+  position: relative;
 }
 
 .inner-container {
@@ -24,6 +26,7 @@ body {
   width: 40vw;
   height: 50vh;
   margin: 200px auto;
+  /* position: relative; */
 }
 
 .box {
@@ -31,4 +34,88 @@ body {
   height: 150px;
   color: #fff;
   padding: 1rem;
+}
+
+.absolute{
+  background-color: blue;
+  /* Needs relative parent or else takes position set in this class
+    takes the relative position of the closest ancestor  
+  */
+  position: absolute; 
+  /* pixels are relative to top left corner*/
+  /* top: 100px;
+  left: 50px; */
+  top: 0;
+  left: 0;
+  /* can use left: -10000px to get something off the screen but can still be read by a screen reader*/
+  z-index: 1; /* similar to to front in powerpoint*/
+}
+
+.relative{
+  background-color: red;
+  position: relative;
+  top: 300px;
+  left: 100px;
+}
+
+/* fixed means to stay in the same position on the screen even when scrolling */
+.fixed{
+  background-color: green;
+  position: fixed;
+  top: 100px;
+}
+
+/* Sticks to position until the container it is in dissapears off the page*/
+.sticky {
+  background-color: #000;
+  position: sticky;
+  top: 0;
+}
+
+/* The header styling */
+
+/* from instantaneous to a smooth transition*/
+html{ scroll-behavior: smooth;}
+
+section{
+  height: 100vh;
+}
+
+.blue{background-color: blue;}
+.red{background-color: red;}
+.green{background-color: green;}
+
+header, footer{
+  color: #fff;
+  text-align: center;
+  height: 100px;
+  font-size: 5rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+footer{
+  background-color: black;
+  position: sticky;
+  bottom: 0;
+  /* width: 100%; position sticky achieves the same thing*/
+  font-size: 3rem;
+}
+
+a:visited{
+  color: #fff;
+}
+
+.social{
+  background-color: royalblue;
+  color: #fff;
+  font-size: inherit;
+  padding: 1rem;
+  position: fixed;
+  top:30%;
+  left: 0;
+  z-index: 1;
 }
