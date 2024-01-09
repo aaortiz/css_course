@@ -1,7 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+/* reset for nav */
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 body {
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0.5rem;
+  text-align: right;
+  background-color: black;
+  margin: 0;
+}
+
+li{
+  display: inline-block; /* list in one row */
+  margin-inline: 0.5rem;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li a:hover, li a:focus {
+  text-decoration: underline;
+}
+
+/* Style for paragraphs*/
+
+/* main {
+  background-color: aqua;
+  width: 50%;
+} */
+
+/* Block level elements have by default 100% width and have padding*/
+/* p{
+  background-color: lightgray; 
+} */
+
+/* no block properities like margin, height. Padding does work. 
+display: inline-block is a hybrid that allows the use of margin and height
+
+turning a link into a button would be a good use case
+list to a row as well
+*/
+/* .opposite{
+  display: inline-block;
+  background-color: #333;
+  color:whitesmoke;
+  margin-top: 100px;
+  height: 200px;
+  padding:4rem; 
+} */
 
