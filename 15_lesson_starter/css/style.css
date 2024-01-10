@@ -9,6 +9,51 @@
 body {
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: 50px auto 50px;
+  grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd"
+    "mn mn mn mn mn mn mn sb sb"
+    "ft ft ft ft ft ft ft ft ft";
+    column-gap: 0.5rem; /* column, column-gap, co*/
+}
+
+.el{
+  background-color: rebeccapurple;
+  color:#fff;
+  display: grid;
+  place-content: center;
+}
+
+.header{
+  grid-area: hd;
+}
+
+.sidebar{
+  grid-area: sb;
+  background-color: blue;
+}
+
+.footer {
+  grid-area: ft;
+}
+
+.container {
+  grid-area: mn;
+  display: grid;
+  /* grid-template-columns: 200px 100px 200px;  */
+  /* grid-template-columns: 2fr 1fr 1fr; fractions fr are a unit for grids */
+  /* grid-auto-flow: row or column */
+  grid-template-columns:repeat(2, 1fr 2fr);
+  grid-auto-rows: minmax(150px, auto); /* can use px or minmax or other*/
+
+  /* know that the same funcitons are available for rows*/
+
+  /* gap types */
+  /* row-gap: 1em;
+  column-gap: 1em; */
+  gap: 1rem; /* shorthand rows then col, can set one value for both */
 }
 
 .box {
@@ -17,6 +62,32 @@ body {
   font-size: 2rem;
   padding: 0.5rem;
 }
+
+/* Chrome dev tools insepct - layout 
+grid overlays allows you to see the grid numbers*/
+.box:first-child{
+  background-color: blue;
+  /* grid-column-start: 1;
+  grid-column-end:4; /* span from first to end of 3rd column/start 4th column
+  grid-row-start: 1;
+  grid-row-end: 3; */
+
+  /* shorthand to achieve the same as the 4 lines above*/
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+  display: grid;
+  /* align-content: center;
+  justify-content: center; */
+  place-content:  center; /* shorthand, indivdiual vals or single*/
+}
+
+.box:nth-child(2){
+  background-color: purple;
+  grid-column: 1 / 5;
+  grid-row: 3/4;
+}
+
+
 
 
 
